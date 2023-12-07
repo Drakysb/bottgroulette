@@ -75,7 +75,6 @@ def process_promo_code(message, user_id):
             conn.commit()
 
     if promo_code == 'drakysb':
-        # Update user balance
         cursor.execute('UPDATE user_balances SET balance = balance + 100 WHERE user_id = ?', (user_id,))
         conn.commit()
 
